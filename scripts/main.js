@@ -64,6 +64,7 @@ langBtn.addEventListener('click', () => {
     document.getElementById('edu-title').innerText = 'Education Use Cases';
     document.getElementById('pricing-title').innerText = 'Pricing Plans';
     document.getElementById('download-title').innerText = 'Download Client';
+    langBtn.innerText = 'EN';
   } else {
     htmlEl.lang = 'zh-CN';
     document.getElementById('hero-title').innerText = 'AI Lab 离线教学平台';
@@ -72,5 +73,19 @@ langBtn.addEventListener('click', () => {
     document.getElementById('edu-title').innerText = '教育应用';
     document.getElementById('pricing-title').innerText = '价格方案';
     document.getElementById('download-title').innerText = '下载客户端';
+    langBtn.innerText = '中';
   }
 });
+
+// Header glass on scroll
+const headerEl = document.querySelector('header.header');
+const toggleHeaderGlass = () => {
+  if (!headerEl) return;
+  if (window.scrollY > 10) {
+    headerEl.classList.add('header-glass');
+  } else {
+    headerEl.classList.remove('header-glass');
+  }
+};
+toggleHeaderGlass();
+window.addEventListener('scroll', toggleHeaderGlass, { passive: true });
