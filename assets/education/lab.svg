@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#667eea"/>
+      <stop offset="1" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#g)" opacity="0.12"/>
+  <g stroke="#667eea" stroke-width="6" fill="white">
+    <path d="M300 80h40v110l-78 128c-10 16 2 36 21 36h234c19 0 31-20 21-36l-78-128V80h40" fill="none"/>
+    <path d="M364 190h72l74 122H290l74-122Z" fill="#ffffff"/>
+  </g>
+  <text x="32" y="410" font-family="Inter, Arial, sans-serif" font-size="24" fill="#334155">校园AI实验室建设</text>
+</svg>
+

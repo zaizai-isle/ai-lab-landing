@@ -16,7 +16,12 @@
       <a href="#education">教育方案</a>
       <a href="#pricing">价格</a>
       <a href="#download">下载</a>
-      <button id="lang-switch">EN</button>
+      <button id="lang-switch" aria-label="Switch language" title="Switch language">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 5h12M9 3v2m0 10c2.5-3 4-6.5 4.5-10M5 9h8M7 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M17 13l4 8m0 0l4-8m-4 8l-1-2h2l-1 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </nav>
   </header>
 
@@ -59,12 +64,28 @@
   <!-- Education -->
   <section id="education" class="education">
     <h2 id="edu-title">教育应用</h2>
-    <ul id="edu-list">
-      <li>校园AI实验室建设</li>
-      <li>基础AI课程教学</li>
-      <li>教师辅助教学工具</li>
-      <li>跨学科创意课程</li>
-    </ul>
+    <div class="edu-cards">
+      <div class="card">
+        <img src="assets/education/lab.png" alt="校园AI实验室建设" onerror="this.onerror=null;this.src='assets/education/lab.svg'">
+        <h3>校园AI实验室建设</h3>
+        <p>搭建离线AI环境，集中管理模型与算力，统一运维保障课堂稳定。</p>
+      </div>
+      <div class="card">
+        <img src="assets/education/course.png" alt="基础AI课程教学" onerror="this.onerror=null;this.src='assets/education/course.svg'">
+        <h3>基础AI课程教学</h3>
+        <p>涵盖大语言模型与多模态入门实践，配套项目案例与教学指引。</p>
+      </div>
+      <div class="card">
+        <img src="assets/education/teacher-tools.png" alt="教师辅助教学工具" onerror="this.onerror=null;this.src='assets/education/teacher-tools.svg'">
+        <h3>教师辅助教学工具</h3>
+        <p>教案生成、测验出题与批改建议，提升备课与课堂互动效率。</p>
+      </div>
+      <div class="card">
+        <img src="assets/education/cross-discipline.png" alt="跨学科创意课程" onerror="this.onerror=null;this.src='assets/education/cross-discipline.svg'">
+        <h3>跨学科创意课程</h3>
+        <p>结合语文、美术、信息技术等学科，打造AI+创作的项目式学习。</p>
+      </div>
+    </div>
   </section>
 
   <!-- Pricing -->

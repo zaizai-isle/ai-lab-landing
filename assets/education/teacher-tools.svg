@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="800" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#667eea"/>
+      <stop offset="1" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" rx="16" fill="url(#g3)" opacity="0.12"/>
+  <g stroke="#667eea" stroke-width="6" fill="white" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="180" y="120" width="440" height="220" rx="12"/>
+    <circle cx="260" cy="230" r="36"/>
+    <path d="M350 280c8-36 40-60 80-60s72 24 80 60H350Z"/>
+  </g>
+  <text x="32" y="410" font-family="Inter, Arial, sans-serif" font-size="24" fill="#334155">教师辅助教学工具</text>
+</svg>
+
