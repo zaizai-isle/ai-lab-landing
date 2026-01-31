@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Lab</title>
+    <script>
+        // Simple language detection
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('zh')) {
+            window.location.href = '/zh/';
+        } else {
+            window.location.href = '/en/';
+        }
+    </script>
+</head>
+
+<body>
+    <p>Redirecting to <a href="/en/">English version</a>...</p>
+</body>
+
+</html>
