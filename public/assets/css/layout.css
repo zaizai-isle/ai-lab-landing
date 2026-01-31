@@ -55,10 +55,20 @@ body {
     font-size: 0.9rem;
     /* color: var(--fg-muted); */
     transition: color 0.2s ease;
+    cursor: pointer;
 }
 
 .nav a:hover {
-    color: #9d9c9c;
+    color: var(--accent);
+}
+
+.lang-switch {
+    font-weight: 600;
+    color: var(--fg) !important;
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    margin-right: 0.5rem;
 }
 
 .nav-cta {
@@ -210,6 +220,13 @@ section {
     font-size: 0.9rem;
     position: relative;
     overflow: hidden;
+}
+
+.visual-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .schematic-nodes {
