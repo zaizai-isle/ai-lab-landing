@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Lab</title>
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+</head>
+
+<body data-page="how-it-works">
+  <!-- 世界层 -->
+  <canvas id="particles"></canvas>
+
+  <!-- 导航（始终一致） -->
+  <header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="/en/">
+            <img src="/assets/svg/logo.svg" alt="AI Lab Logo" />
+        </a>
+        <nav class="nav">
+            <a href="/en/manifesto.html">Manifesto</a>
+            <a href="/en/how-it-works.html">How it works</a>
+            <a href="/en/pricing.html">Pricing</a>
+            <a href="/en/download.html" class="nav-cta">Download</a>
+        </nav>
+    </div>
+</header>
+  
+    <main class="how-content">
+      <!-- Section 1 -->
+      <section class="how-section">
+        <div class="belief">We slow people down.</div>
+        <div class="mechanism">
+          <p>By removing instant answers.</p>
+          <p>By structuring questions before outputs.</p>
+          <p>By forcing intent to be explicit.</p>
+        </div>
+        <div class="result">Understanding replaces reaction.</div>
+      </section>
+  
+      <!-- Section 2 -->
+      <section class="how-section">
+        <div class="belief">We make thinking visible.</div>
+        <div class="mechanism">
+          <p>By separating prompting from output.</p>
+          <p>By exposing intermediate reasoning.</p>
+          <p>By treating models as tools, not oracles.</p>
+        </div>
+        <div class="result">AI becomes a mirror, not a mind.</div>
+      </section>
+  
+      <!-- Section 3 -->
+      <section class="how-section">
+        <div class="belief">We protect learning environments.</div>
+        <div class="mechanism">
+          <p>By enforcing local-only deployment.</p>
+          <p>By removing hidden data flows.</p>
+          <p>By designing for classrooms, not feeds.</p>
+        </div>
+        <div class="result">Students stay owners of their thinking.</div>
+      </section>
+  
+      <!-- Section 4 -->
+      <section class="how-section emphasis">
+        <div class="belief">This is infrastructure.</div>
+        <div class="mechanism">
+          <p>No growth hacks.</p>
+          <p>No dark patterns.</p>
+          <p>No optimization for addiction.</p>
+        </div>
+        <div class="result">Only systems that respect cognition.</div>
+      </section>
+    </main>
+  
+ <!-- 页脚（世界背景） -->
+ <footer class="site-footer">
+  AI Lab · Offline First · Education Safe
+</footer>
+
+<!-- 页面初始化 -->
+<script type="module">
+  import { mountParticles } from "/assets/js/particles/mount.js";
+  mountParticles(document.body.dataset.page);
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Lab</title>
+    <link rel="stylesheet" href="/assets/css/base.css" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+</head>
+
+<body data-page="manifesto">
+    <!-- 世界层 -->
+    <canvas id="particles"></canvas>
+
+    <!-- 导航（始终一致） -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/en/">
+                <img src="/assets/svg/logo.svg" alt="AI Lab Logo" />
+            </a>
+            <nav class="nav">
+                <a href="/en/manifesto.html">Manifesto</a>
+                <a href="/en/how-it-works.html">How it works</a>
+                <a href="/en/pricing.html">Pricing</a>
+                <a href="/en/download.html" class="nav-cta">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 内容层 -->
+    <main class="manifesto-content">
+        <section class="statement opening">
+            <p>We are not here to accelerate.</p>
+            <p>We are here to make thinking visible again.</p>
+        </section>
+
+        <section class="statement">
+            <p>We reject AI as a shortcut.</p>
+            <p>We reject speed without understanding.</p>
+            <p>We reject tools that think instead of people.</p>
+        </section>
+
+        <section class="statement">
+            <p>We believe AI should slow people down.</p>
+            <p>Not by force.</p>
+            <p>But by structure.</p>
+        </section>
+
+        <section class="statement emphasis">
+            <p>This is not productivity software.</p>
+            <p>This is cognitive infrastructure.</p>
+        </section>
+
+        <section class="statement closing">
+            <p>If you are looking for faster answers,</p>
+            <p>this is not for you.</p>
+            <p>If you are willing to think again,</p>
+            <p>welcome.</p>
+        </section>
+    </main>
+
+
+    <!-- 页脚（世界背景） -->
+    <footer class="site-footer">
+        AI Lab · Offline First · Education Safe
+    </footer>
+
+    <!-- 页面初始化 -->
+    <script type="module">
+        import { mountParticles } from "/assets/js/particles/mount.js";
+        mountParticles(document.body.dataset.page);
+    </script>
+</body>
+
+</html>

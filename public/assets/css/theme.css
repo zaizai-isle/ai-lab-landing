@@ -1,0 +1,50 @@
+/* Theme variables — Antigravity style */
+
+:root {
+    --bg: #f8f9fa;
+    --bg-soft: #ffffff;
+    --fg: #1a1c23;
+    --fg-muted: #313131;
+
+    --accent: #0f101b;
+    /* Slightly more vibrant for light bg */
+    --accent-soft: rgb(5, 26, 84);
+
+    --border: rgba(0, 0, 0, 0.08);
+
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    --bg: #0b0d12;
+    --bg-soft: #121521;
+    --fg: #e8eaf1;
+    --fg-muted: #a0a4b8;
+    --border: rgba(255, 255, 255, 0.12);
+}
+
+/* Light theme placeholder (future) */
+[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #111;
+}
+
+/* Selection */
+::selection {
+    background: var(--accent-soft);
+    color: var(--fg);
+}
+
+/* Scrollbar (WebKit) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+}

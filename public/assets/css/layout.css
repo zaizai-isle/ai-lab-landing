@@ -1,0 +1,518 @@
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    overflow-x: hidden;
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    border-bottom: none;
+}
+
+.header-inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.02em;
+}
+
+.logo img {
+    height: 32px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav a {
+    font-size: 0.9rem;
+    /* color: var(--fg-muted); */
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #9d9c9c;
+}
+
+.nav-cta {
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #f0f0f0;
+}
+
+.site-footer {
+    margin-top: 6rem;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.footer-links a {
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+}
+
+.footer-links a:hover {
+    color: var(--fg);
+}
+
+/* Page spacing */
+main {
+    height: auto;
+}
+
+/* Background canvas */
+#anti-particles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Sections */
+/* Sections */
+section {
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: hidden;
+}
+
+/* Download Section */
+.download-area {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 60px;
+    width: 100%;
+}
+
+.download-container {
+    position: relative;
+    z-index: 10;
+    padding: 0 5rem;
+    width: 100%;
+    /* Ensure content is centered if needed, or remove max-width if "no limit" applies to inner too. 
+       User said "other don't limit width". 
+       I will remove .container usage in HTML, so here I ensure basic centering is handled or ignored. */
+}
+
+/* ... */
+
+/* Mega Footer */
+.mega-footer {
+    padding: 4rem 60px 2rem 60px;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    /* Full screen height */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+/* PPT Slide Layout */
+.slide-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 4rem;
+}
+
+.slide-text {
+    flex: 1;
+    max-width: 650px;
+}
+
+.slide-visual {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visual-placeholder {
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    background: var(--bg-soft);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.schematic-nodes {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2rem;
+}
+
+.node-item::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.node-item {
+    background: #fff;
+    padding: 1.25rem 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    font-weight: 600;
+    color: var(--fg);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.slide-page {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.manifesto-lines {
+    margin-top: 1.25rem;
+}
+
+.manifesto-lines p {
+    font-size: clamp(1.25rem, 2vw, 1.8rem);
+    line-height: 1.1;
+    color: var(--fg-muted);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.manifesto-lines p.result-line {
+    color: var(--accent);
+    font-weight: 700;
+    margin-top: 2rem;
+    font-size: clamp(1.4rem, 3.5vw, 2rem);
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: var(--fg);
+}
+
+/* Download Section */
+.download-area {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.pricing-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.rule-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--fg);
+    font-weight: 500;
+}
+
+.rule-item::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.download-card {
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    background: #000;
+    border-radius: 48px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#download-particles {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.download-container {
+    position: relative;
+    z-index: 10;
+    padding: 0 5rem;
+    width: 100%;
+}
+
+.download-content {
+    max-width: 1200px;
+    text-align: left;
+}
+
+.download-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    /* Extra bold */
+    color: #fff;
+    line-height: 1.05;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.04em;
+}
+
+.download-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-download {
+    padding: 1rem 2rem;
+    border-radius: 99px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    text-decoration: none;
+}
+
+.btn-download.primary {
+    background: #fff;
+    color: #000;
+}
+
+.btn-download.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-download:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-download.primary:hover {
+    background: #f0f0f0;
+}
+
+.btn-download.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* Mega Footer */
+/* Mega Footer */
+.mega-footer {
+    padding: 2rem 60px;
+    background: var(--bg);
+    /* border-top: 1px solid var(--border); */
+    /* Removed to match other sections */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    /* Fixed height like sections */
+    min-height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    overflow: hidden;
+}
+
+.mega-footer-top,
+.mega-footer-center,
+.mega-footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mega-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 14rem;
+    /* Restore visual spacing inside max-width container */
+}
+
+.footer-cta {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 500;
+    color: var(--fg);
+}
+
+.footer-nav-columns {
+    display: flex;
+    gap: 4rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-column h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    font-size: 0.9rem;
+    color: var(--fg-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-column a:hover {
+    color: var(--accent);
+}
+
+.mega-footer-center {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 2rem 0; */
+    overflow: hidden;
+
+}
+
+.giant-brand-text {
+    font-size: 22vw;
+    font-weight: 800;
+    line-height: 0.8;
+    letter-spacing: -0.06em;
+    color: var(--fg);
+    text-align: center;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.mega-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 2rem;
+}
+
+.footer-logo-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--fg-muted);
+}
+
+.footer-legal {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-legal a {
+    font-size: 0.85rem;
+    color: var(--fg-muted);
+    text-decoration: none;
+}
