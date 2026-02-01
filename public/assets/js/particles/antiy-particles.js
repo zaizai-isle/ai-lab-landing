@@ -73,7 +73,7 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, CONFIG.SIZE, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(0,0,0,0.15)";
+        ctx.fillStyle = currentColor;
         ctx.fill();
     }
 }
@@ -83,7 +83,11 @@ for (let i = 0; i < CONFIG.COUNT; i++) {
     particles.push(new Particle());
 }
 
+let currentColor = "rgba(0,0,0,0.15)";
 function animate(t) {
+    const style = getComputedStyle(document.documentElement);
+    currentColor = style.getPropertyValue('--particle-color').trim() || currentColor;
+
     ctx.clearRect(0, 0, w, h);
     for (const p of particles) {
         p.update(t);
@@ -91,5 +95,7 @@ function animate(t) {
     }
     requestAnimationFrame(animate);
 }
+
+// Update Particle.draw to use currentColor
 
 requestAnimationFrame(animate);

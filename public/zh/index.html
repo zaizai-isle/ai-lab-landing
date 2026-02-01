@@ -39,6 +39,13 @@
             </a>
             <nav class="nav">
                 <a href="/en/" class="lang-switch">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="切换主题">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path class="sun"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                        <path class="moon" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" style="display:none;" />
+                    </svg>
+                </button>
                 <a href="#manifesto">宣言</a>
                 <a href="#how">运行原理</a>
                 <a href="#pricing">定价</a>
@@ -409,6 +416,32 @@
     <script src="/assets/js/particles/antiy-particles.js"></script>
     <script src="/assets/js/particles/download-particles.js"></script>
     <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const sunIcon = themeToggle.querySelector('.sun');
+        const moonIcon = themeToggle.querySelector('.moon');
+        const root = document.documentElement;
+
+        function updateTheme(theme) {
+            root.setAttribute('data-theme', theme);
+            if (theme === 'dark') {
+                sunIcon.style.display = 'none';
+                moonIcon.style.display = 'block';
+            } else {
+                sunIcon.style.display = 'block';
+                moonIcon.style.display = 'none';
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        updateTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            updateTheme(currentTheme);
+        });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
