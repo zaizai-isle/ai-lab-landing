@@ -53,13 +53,13 @@ body {
 
 .nav a {
     font-size: 0.9rem;
-    /* color: var(--fg-muted); */
+    color: var(--fg-muted);
     transition: color 0.2s ease;
     cursor: pointer;
 }
 
 .nav a:hover {
-    color: var(--accent);
+    color: var(--fg);
 }
 
 .lang-switch {
@@ -249,6 +249,29 @@ section {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* Theme-aware images */
+.dark-only {
+    display: none !important;
+}
+
+[data-theme="dark"] .dark-only {
+    display: block !important;
+}
+
+[data-theme="dark"] .light-only {
+    display: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .dark-only {
+        display: block !important;
+    }
+
+    :root:not([data-theme="light"]) .light-only {
+        display: none !important;
+    }
 }
 
 .schematic-nodes {
