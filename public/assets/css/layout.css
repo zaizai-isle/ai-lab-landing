@@ -53,13 +53,13 @@ body {
 
 .nav a {
     font-size: 0.9rem;
-    color: var(--fg-muted);
+    /* color: var(--fg-muted); */
     transition: color 0.2s ease;
     cursor: pointer;
 }
 
 .nav a:hover {
-    color: var(--fg);
+    color: var(--bg);
 }
 
 .lang-switch {
