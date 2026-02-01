@@ -29,7 +29,7 @@ We believe AI should be a **mirror, not a mind**.
 ## 📥 Getting Started
 
 ### 1. Download
-Visit the [AI Lab Homepage](https://zaizai-isle.github.io/ai-lab-landing/) to download the latest release for MacOS.
+Visit the [AI Lab Homepage](https://github.com/zaizai-isle/ai-lab-landing/releases/download/v1.0.0/BetterAI-1.4.36-arm64.dmg) to download the latest release for MacOS.
 
 ### 2. Local Development
 To run this landing page locally for development:
