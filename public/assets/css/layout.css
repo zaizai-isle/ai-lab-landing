@@ -97,7 +97,7 @@ body {
     padding: 0.5rem 1.1rem;
     border-radius: 999px;
     background: var(--accent);
-    color: #f0f0f0;
+    color: var(--accent-fg);
 }
 
 .site-footer {

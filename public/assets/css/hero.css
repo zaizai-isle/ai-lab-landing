@@ -45,7 +45,7 @@
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
     background: var(--accent);
-    color: #fefeff;
+    color: var(--accent-fg);
     border-radius: 99px;
     font-weight: 600;
     transition: all 0.3s ease;
