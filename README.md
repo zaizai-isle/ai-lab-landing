@@ -44,7 +44,7 @@ npx serve public
 
 ## 🔒 Ethics & Privacy
 
-- **Free for Educators & Individual Learners.**
+- **Educators & Individual Learners.**
 - **No keys to your lab**: Local running means you are the owner.
 - **No optimization for addiction**: No notifications, no loops, just utility.
 
